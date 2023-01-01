@@ -1,0 +1,263 @@
+.main {
+  flex-grow: 1;
+  padding-top: 8rem;
+
+  @include responsive(tablet) {
+    padding-top: 0;
+  }
+}
+
+// HERO SECTION
+.hero {
+  padding: 14rem 0;
+  background-image: url(../../images/svg/hero-bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right -3rem top -8rem;
+  position: relative;
+
+  &__info {
+    max-width: 44.7rem;
+
+    h1 {
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      @include fontStyle(1.8rem, -0.28px, 1.56, normal, inherit);
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: -8rem;
+    right: 0;
+    z-index: 0;
+    max-width: 61.8rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include responsive(desktop) {
+    background-position: right -14rem top -20rem;
+
+    &__info {
+      p {
+        @include fontStyle(1.5rem, -0.23px, 1.67, normal, inherit);
+        margin-bottom: 3.3rem;
+      }
+    }
+
+    &__image {
+      top: -18.2rem;
+      right: -11rem;
+    }
+  }
+
+  @include responsive(laptop) {
+    background-position: right -32rem top -18rem;
+    padding: 10rem 0;
+
+    &__image {
+      max-width: 55rem;
+      top: -15rem;
+      right: -21.8rem;
+    }
+  }
+
+  @include responsive(firstTablet) {
+    background-position: right -42rem top -18rem;
+    padding: 9rem 0;
+
+    &__info {
+      max-width: 36.7rem;
+    }
+
+    &__image {
+      max-width: 55rem;
+      top: -15rem;
+      right: -31rem;
+    }
+  }
+
+  @include responsive(tablet) {
+    padding-top: 6.4rem;
+    background-image: url(../../images/svg/hero-bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right top -30rem;
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__info {
+      padding: 0;
+    }
+
+    &__image {
+      width: 100%;
+      position: static;
+      margin-bottom: 4.1rem;
+    }
+  }
+
+  @include responsive(tablet2) {
+    background-position: right top -32rem;
+  }
+
+  @include responsive(firstMobile) {
+    background-position: right top -40rem;
+    text-align: center;
+  }
+
+  @include responsive(mobile) {
+    background-image: url(../../images/svg/hero-bg-mobile.svg);
+    background-position: top right;
+  }
+}
+
+.features {
+  background-color: #f4f5f7;
+  padding: 9.6rem 0 9.4rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    max-width: 63.5rem;
+    margin-bottom: 7.2rem;
+
+    h1 {
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      @include fontStyle(1.8rem, -0.28px, 1.56, normal, inherit);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  &__item {
+    width: 25.5rem;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 7.2rem;
+      height: 7.2rem;
+      margin-bottom: 4rem;
+    }
+
+    h3 {
+      margin-bottom: 2.6rem;
+    }
+
+    p {
+      @include fontStyle(1.6rem, -0.25px, 1.62, normal, inherit);
+    }
+  }
+
+  @include responsive(firstTablet) {
+    padding: 6.4rem 0;
+
+    .container {
+      align-items: center;
+    }
+
+    &__info {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        margin-bottom: 1.4rem;
+      }
+
+      p {
+        @include fontStyle(1.5rem, -0.23px, 1.67, normal, inherit);
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      row-gap: 4rem;
+    }
+
+    &__item {
+      align-items: center;
+      text-align: center;
+
+      img {
+        margin-bottom: 2.4rem;
+      }
+
+      h3 {
+        margin-bottom: 1.6rem;
+      }
+
+      p {
+        @include fontStyle(1.5rem, -0.23px, 1.67, normal, inherit);
+      }
+    }
+  }
+}
+
+.articles {
+  padding: 8rem 0 10.4rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  &__item {
+    width: 25.5rem;
+    background-color: $primary-white-color;
+
+    &-info {
+      padding: 2.5rem 2.4rem 2.4rem;
+      h6 {
+        margin-bottom: 0.8rem;
+      }
+  
+      h4 {
+        margin-bottom: 0.8rem;
+      }
+  
+      p {
+        @include fontStyle(1.3rem, -0.2px, 1.38, normal, inherit);
+      }
+    }
+  }
+
+  @include responsive(secondLaptop) {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      row-gap: 4rem;
+    }
+  }
+}

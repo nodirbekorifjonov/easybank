@@ -1,0 +1,56 @@
+body {
+  @include fontStyle(1.6rem, -0.25px, 1.62, normal, $primary-grey-color);
+  font-family: $main-font-family;
+}
+
+h1 {
+  @include fontStyle(5.6rem, -1px, 1.114, 100, $primary-dark-color);
+}
+
+h2 {
+  @include fontStyle(4rem, -0.7px, 1.6, 100, $primary-dark-color);
+}
+
+h3 {
+  @include fontStyle(2.4rem, -0.4px, 1.17, 100, $primary-dark-color);
+}
+
+h4 {
+  @include fontStyle(1.6rem, -0.29px, 1.25, 100, $primary-dark-color);
+}
+
+h6 {
+  @include fontStyle(1rem, -0.16px, 1.8, normal, $primary-grey-color);
+}
+
+@include responsive(desktop) {
+  body {
+    @include fontStyle(1.3rem, -0.2px, 1.38, normal, $primary-grey-color);
+  }
+
+  h1 {
+    @include fontStyle(5rem, -1px, 1.1, 100, $primary-dark-color);
+  }
+
+  h2 {
+    @include fontStyle(3.4rem, -0.7px, 1.6, 100, $primary-dark-color);
+  }
+
+  h3 {
+    @include fontStyle(2rem, -0.3px, 1.15, 100, $primary-dark-color);
+  }
+}
+
+@include responsive(firstMobile) {
+  h1 {
+    @include fontStyle(4rem, -0.7px, 1.175, 100, $primary-dark-color);
+  }
+
+  h2 {
+    @include fontStyle(3.4rem, -0.6px, 1.1875, 100, $primary-dark-color);
+  }
+
+  h3 {
+    @include fontStyle(2rem, -0.35px, 1.4, 100, $primary-dark-color);
+  }
+}

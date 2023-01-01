@@ -1,0 +1,58 @@
+.btn {
+  display: inline-block;
+  padding: 0.8rem 3.6rem 0.8rem 3.3rem;
+  background: $primary-gradient;
+  border-radius: 22px;
+  @include fontStyle(1.4rem, normal, 2, 500, $primary-white-color);
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.header__btn {
+  @include responsive(laptop) {
+    display: none;
+  }
+}
+
+.burger {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+
+  div {
+    width: 24px;
+    height: 1px;
+    background-color: $primary-dark-color;
+    transition: 0.5s ease;
+  }
+
+  div:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  @include responsive(tablet) {
+    display: block;
+  }
+}
+
+.toggle {
+  .line-1 {
+    transform: rotate(-45deg) translate(-4px, 2px);
+  }
+
+  .line-2 {
+    opacity: 0;
+  }
+
+  .line-3 {
+    transform: rotate(45deg) translate(-4px, -4px);
+  }
+}

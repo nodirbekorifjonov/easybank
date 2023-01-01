@@ -1,0 +1,32 @@
+.header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  background-color: $primary-white-color;
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // LOGO
+    .site-logo {
+      img {
+        width: 13.9rem;
+        height: 2rem;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @include responsive(tablet) {
+    padding: 2.2rem 0;
+  }
+}

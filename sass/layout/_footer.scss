@@ -1,0 +1,121 @@
+.footer {
+  padding: 4.8rem 0;
+  background-color: $primary-dark-color;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__first {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.5rem;
+    margin-right: 13.1rem;
+
+    // LOGO
+    .site-logo {
+      img {
+        width: 13.9rem;
+        height: 2rem;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    .social-list {
+      display: flex;
+      align-items: center;
+      column-gap: 1.3rem;
+    }
+
+    .social-link:hover path {
+      fill: $primary-green-color;
+    }
+  }
+  
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0.8rem;
+  }
+
+  &__item {
+    width: 16rem;
+  }
+
+  &__link {
+    @include fontStyle(1.5rem, -0.23, 1.73, normal, $primary-white-color);
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $primary-green-color;
+    }
+  }
+
+  &__second {
+    text-align: right;
+
+    p {
+        @include fontStyle(1.5rem, -0.23px, 1.73, normal, $primary-white-color);
+        opacity: 0.5;
+    }
+  }
+
+  .btn {
+    margin-bottom: 2.4rem;
+  }
+
+  @include responsive(laptop) {
+    text-align: center;
+
+    .container {
+        justify-content: space-between;
+    }
+    &__first {
+        margin: 0;
+    }
+
+    &__nav {
+        margin: 0;
+    }
+  }
+
+  @include responsive(secondLaptop) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__first {
+        row-gap: 3.2rem;
+        align-items: center;
+        margin-bottom: 3.4rem;
+    }
+
+    &__nav {
+        margin-bottom: 3.2rem;
+    }
+
+    &__second {
+        text-align: center;
+    }
+  }
+
+  @include responsive(firstMobile) {
+    &__nav {
+        flex-direction: column;
+    }
+  }
+}
